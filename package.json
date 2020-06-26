@@ -1,0 +1,21 @@
+{
+  "name": "covid19_tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avery1221/covid19_tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avery1221/covid19_tracker/issues"
+  },
+  "homepage": "https://github.com/avery1221/covid19_tracker#readme"
+}

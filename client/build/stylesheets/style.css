@@ -1,0 +1,61 @@
+form.signup,
+form.login {
+  margin: 50px;
+  padding: 50px;
+  margin-top: 50px;
+  align-self: start;
+  font-weight: lighter;
+}
+.label {
+  font-weight: normal;
+}
+.container {
+  padding: 0px;
+  color: rgba(red, green, blue, alpha)
+}
+h1 {
+  font-weight: bold;
+}
+#vaykay {
+font-family: 'Great Vibes', cursive;
+font-size: 50px;
+font-weight: 800;
+} 
+.modal-background
+{
+  opacity:0.5 !important;
+}
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+.thumb {
+  margin: 1em;
+}
+#page {
+  font-family: 'IM Fell Great Primer SC', serif;
+  font-size: 35px;
+  }
+  
+  .all{
+  font-family: 'IM Fell Great Primer SC', serif;
+  font-size: 25px;
+  
+  }
+  .column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+   
+  }
+  #bg {
+    background-color: burlywood;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
