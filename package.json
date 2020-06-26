@@ -1,21 +1,76 @@
 {
-  "name": "covid19_tracker",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "name": "covid-19",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://fast-beyond-97603.herokuapp.com/",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.28",
+    "@fortawesome/free-brands-svg-icons": "^5.13.0",
+    "@fortawesome/free-regular-svg-icons": "^5.13.0",
+    "@fortawesome/free-solid-svg-icons": "^5.13.0",
+    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
+    "compression": "^1.7.4",
+    "connect-mongo": "^2.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "if-env": "^1.0.4",
+    "mapbox-gl": "^1.9.1",
+    "mongoose": "^5.3.16",
+    "mysql2": "^2.1.0",
+    "netlify-cli": "^2.40.0",
+    "node-sass": "^4.13.1",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "puppeteer": "git+https://github.com/GoogleChrome/puppeteer.git",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-chartjs-2": "^2.9.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.13.1",
+    "react-flags-select": "^1.1.12",
+    "react-google-charts": "^3.0.15",
+    "react-number-format": "^4.4.1",
+    "react-responsive": "^8.0.3",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "reactstrap": "^8.4.1",
+    "sequelize": "^5.21.5",
+    "spectre.css": "^0.5.8",
+    "swr": "^0.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*' server.js \" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/avery1221/covid19_tracker.git"
-  },
-  "keywords": [],
-  "author": "",
+  "author": "Jeff Bell, Kevin Ngo, Avery Rouser, Jomain Rouser",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/avery1221/covid19_tracker/issues"
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.7"
   },
-  "homepage": "https://github.com/avery1221/covid19_tracker#readme"
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
